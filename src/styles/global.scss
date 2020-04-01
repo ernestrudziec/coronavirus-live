@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css?family=Baloo+2:400,500,600,700,800|Oxanium:200,300,400,500,600,700,800&display=swap&subset=latin-ext');
+
+
+
+html{
+
+  font-family: 'Baloo 2';
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  font-size: 21px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*,*::before,*::after {
+  box-sizing: inherit;
+}
+
+body{
+
+  line-height: 1.5;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  font-size: 21px;
+
+
+}
+
+p{
+  font-size: 21px;
+  line-height: 1.5;
+}
+
+h1{
+  line-height: 1.5;
+  font-size: 1.6em;
+  font-family: Oxanium;
+}
+
+
+
+@media screen and (max-width: 900px) {
+  html,body,p{
+    font-size: 18px;
+  }
+
+
+
+}
+
+strong{
+  font-weight: 600;
+}
+
+a{
+  text-decoration: none;
+}

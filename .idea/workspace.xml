@@ -2,28 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eced3c31-8cc9-4887-b2cf-21062106c9c0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/global.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/Homepage/Homepage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/Root.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/WebScraping/WebScraping.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/WebScraping/WebScraping.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/logo192.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/logo512.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/robots.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/serviceWorker.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/setupTests.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/global.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Homepage/Homepage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Homepage/Homepage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,8 +16,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="SCSS File" />
         <option value="JavaScript File" />
+        <option value="SCSS File" />
       </list>
     </option>
   </component>
@@ -64,6 +47,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/WebScraping" />
       <recent name="$PROJECT_DIR$/src/views" />
       <recent name="$PROJECT_DIR$/src/views/Homepage" />
     </key>
@@ -93,7 +77,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1585782306761</updated>
-      <workItem from="1585782308538" duration="1031000" />
+      <workItem from="1585782308538" duration="1766000" />
     </task>
     <servers />
   </component>
@@ -105,21 +89,21 @@
       <screen x="0" y="23" width="1680" height="969" />
     </state>
     <state x="200" y="259" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1680.969@0.23.1680.969" timestamp="1585782691136" />
-    <state width="867" height="240" key="GridCell.Tab.0.bottom" timestamp="1585783128291">
+    <state width="867" height="240" key="GridCell.Tab.0.bottom" timestamp="1585784022456">
       <screen x="0" y="23" width="1680" height="969" />
     </state>
-    <state width="867" height="240" key="GridCell.Tab.0.bottom/0.23.1680.969@0.23.1680.969" timestamp="1585783128291" />
-    <state width="867" height="240" key="GridCell.Tab.0.center" timestamp="1585783128290">
+    <state width="867" height="240" key="GridCell.Tab.0.bottom/0.23.1680.969@0.23.1680.969" timestamp="1585784022456" />
+    <state width="867" height="240" key="GridCell.Tab.0.center" timestamp="1585784022455">
       <screen x="0" y="23" width="1680" height="969" />
     </state>
-    <state width="867" height="240" key="GridCell.Tab.0.center/0.23.1680.969@0.23.1680.969" timestamp="1585783128290" />
-    <state width="867" height="240" key="GridCell.Tab.0.left" timestamp="1585783128290">
+    <state width="867" height="240" key="GridCell.Tab.0.center/0.23.1680.969@0.23.1680.969" timestamp="1585784022455" />
+    <state width="867" height="240" key="GridCell.Tab.0.left" timestamp="1585784022454">
       <screen x="0" y="23" width="1680" height="969" />
     </state>
-    <state width="867" height="240" key="GridCell.Tab.0.left/0.23.1680.969@0.23.1680.969" timestamp="1585783128290" />
-    <state width="867" height="240" key="GridCell.Tab.0.right" timestamp="1585783128291">
+    <state width="867" height="240" key="GridCell.Tab.0.left/0.23.1680.969@0.23.1680.969" timestamp="1585784022454" />
+    <state width="867" height="240" key="GridCell.Tab.0.right" timestamp="1585784022456">
       <screen x="0" y="23" width="1680" height="969" />
     </state>
-    <state width="867" height="240" key="GridCell.Tab.0.right/0.23.1680.969@0.23.1680.969" timestamp="1585783128291" />
+    <state width="867" height="240" key="GridCell.Tab.0.right/0.23.1680.969@0.23.1680.969" timestamp="1585784022456" />
   </component>
 </project>
