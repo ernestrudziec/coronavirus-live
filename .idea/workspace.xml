@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eced3c31-8cc9-4887-b2cf-21062106c9c0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/WebScraping/WebScraping.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/WebScraping/WebScraping.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/global.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Homepage/Homepage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Homepage/Homepage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/WebScraping/WebScraping.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/WebScraping/WebScraping.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/WebScraping/WebScraping.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/WebScraping/WebScraping.module.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +75,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1585782306761</updated>
-      <workItem from="1585782308538" duration="1766000" />
+      <workItem from="1585782308538" duration="2830000" />
     </task>
     <servers />
   </component>
@@ -89,6 +87,10 @@
       <screen x="0" y="23" width="1680" height="969" />
     </state>
     <state x="200" y="259" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1680.969@0.23.1680.969" timestamp="1585782691136" />
+    <state x="110" y="23" key="CommitChangelistDialog2" timestamp="1585784848336">
+      <screen x="0" y="23" width="1680" height="969" />
+    </state>
+    <state x="110" y="23" key="CommitChangelistDialog2/0.23.1680.969@0.23.1680.969" timestamp="1585784848336" />
     <state width="867" height="240" key="GridCell.Tab.0.bottom" timestamp="1585784022456">
       <screen x="0" y="23" width="1680" height="969" />
     </state>

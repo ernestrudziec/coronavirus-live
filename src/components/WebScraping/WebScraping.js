@@ -311,7 +311,7 @@ class WebScraping extends React.Component {
                 <div className={styles.totalWrapper}>
 
                     <div className={styles.mainWrapper}>
-                        <header><b>Koronawirus</b> W Polsce i na Świecie.</header>
+                        <header> <caption className={styles.websiteTitle}><b>koronawirus</b>-live.pl</caption> <b> Dane o SARS-CoV-2</b> W Polsce i na Świecie na żywo.</header>
                         <div className={styles.polandWrapper}>
 
                             <div className={styles.polandCasesWrapper}>

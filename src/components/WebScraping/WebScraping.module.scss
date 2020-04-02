@@ -27,6 +27,7 @@ $redColor: #c21807;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+
 }
 
 .dataTablesWrapper{
@@ -99,6 +100,7 @@ $redColor: #c21807;
 }
 
 .polandWrapper{
+  padding: 30px 0px;
   @include mediumShadow;
   @include flexCenter;
   @include borderRadius;
@@ -117,7 +119,7 @@ $redColor: #c21807;
     margin: 0;
     opacity: 0.3;
     font-size: 0.8em;
-    width: 100%;
+    width: 80%;
     font-family: Oxanium;
 
 
@@ -230,6 +232,7 @@ $redColor: #c21807;
 
 
 .mainWrapper{
+
   height: auto;
   margin-bottom: 30px;
   width: 100vw;
@@ -241,6 +244,7 @@ $redColor: #c21807;
 
 
   header{
+    @include mediumShadow;
     margin: 20px 0;
     border-radius: 10px;
     font-size: 1em;
@@ -251,9 +255,13 @@ $redColor: #c21807;
     background:  $redColor;
     color: white;
     width: 90vw;
-    padding: 10px;
+    padding: 40px 10px;
     flex-direction: column;
     text-transform: uppercase;
+
+    caption{
+      @include mediumShadow;
+    }
 
     b{
       font-size: 1.5em;
@@ -300,6 +308,7 @@ $redColor: #c21807;
 }
 
 .regionWrapperPoland {
+
   @include mediumShadow;
   width: 88vw;
   display: flex;
@@ -446,6 +455,7 @@ $redColor: #c21807;
 }
 
 .countryTotalWrapper{
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -575,6 +585,8 @@ $redColor: #c21807;
 
   @include flexCenter;
   @include borderRadius;
+  @include mediumShadow;
+  padding: 30px 0px;
   flex-direction: column;
   width: 90vw;
   height: auto;
@@ -697,5 +709,20 @@ $redColor: #c21807;
     font-weight: 900;
     font-family: Oxanium;
     color: $redColor;
+  }
+}
+
+.websiteTitle{
+  font-size: 1.3em;
+  background: white;
+  color: $redColor;
+  padding: 5px 20px;
+  border-radius: 5px;
+  margin: 20px 5px;
+  font-weight: 300;
+  text-transform: lowercase;
+  b{
+    font-size: 1em !important;
+    font-weight: 900 !important;
   }
 }
