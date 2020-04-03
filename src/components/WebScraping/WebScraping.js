@@ -13,6 +13,8 @@ const urlTotalCountries = 'https://services1.arcgis.com/0MSEUqKaxRlEPj5g/ArcGIS/
 
 class WebScraping extends React.Component {
 
+
+
     constructor(props) {
         super(props);
 
@@ -27,7 +29,8 @@ class WebScraping extends React.Component {
             totalCases: null,
             totalDeaths: null,
             totalRecovered: null,
-            totalCountriesArray: []
+            totalCountriesArray: [],
+            lastUpdatedObject: null,
         };
 
 
@@ -45,19 +48,20 @@ class WebScraping extends React.Component {
         })
             .then(response => response.json())
             .then(json => {
-                console.log(json.features[json.features.length-1].attributes);
+                // console.log(json.features[json.features.length-1].attributes);
 
                 console.log("lastUpdated: " + json.features[json.features.length-1].attributes.Aktualizacja);
-                this.setState({deaths: json.features[json.features.length-1].attributes.Aktualizacja});
+                this.setState({lastUpdated: json.features[json.features.length-1].attributes.Aktualizacja});
 
-                console.log("confPoland: " + json.features[json.features.length-1].attributes.Potwierdzone);
+
+                // console.log("confPoland: " + json.features[json.features.length-1].attributes.Potwierdzone);
                 this.setState({confirmed: json.features[json.features.length-1].attributes.Potwierdzone});
-                console.log("deathsPoland: " + json.features[json.features.length-1].attributes.Smiertelne);
+                // console.log("deathsPoland: " + json.features[json.features.length-1].attributes.Smiertelne);
                 this.setState({deaths: json.features[json.features.length-1].attributes.Smiertelne});
 
-                console.log("dailyConfPoland: " + json.features[json.features.length-1].attributes.Dziennie_potwierdzone);
+                // console.log("dailyConfPoland: " + json.features[json.features.length-1].attributes.Dziennie_potwierdzone);
                 this.setState({dailyCases: json.features[json.features.length-1].attributes.Dziennie_potwierdzone});
-                console.log("dailyDeathsPoland: " + json.features[json.features.length-1].attributes.Dziennie_śmiertelne);
+                // console.log("dailyDeathsPoland: " + json.features[json.features.length-1].attributes.Dziennie_śmiertelne);
                 this.setState({dailyDeaths: json.features[json.features.length-1].attributes.Dziennie_śmiertelne});
 
             });
@@ -108,7 +112,7 @@ class WebScraping extends React.Component {
             .then(json => {
 
                 this.setState({totalRecovered: json.features[0].attributes.value});
-                console.log("Total Recovered: " + this.state.totalRecovered);
+                // console.log("Total Recovered: " + this.state.totalRecovered);
             });
 
         // json.features.map( region => {
@@ -141,7 +145,7 @@ class WebScraping extends React.Component {
             .then(response => response.json())
             .then(json => {
                 this.setState({totalDeaths: json.features[0].attributes.value});
-                console.log("Total Deaths: " + this.state.totalDeaths);
+                // console.log("Total Deaths: " + this.state.totalDeaths);
             });
 
         // json.features.map( region => {
@@ -175,7 +179,7 @@ class WebScraping extends React.Component {
             .then(json => {
 
                 this.setState({totalCases: json.features[0].attributes.value});
-                console.log("Total Cases: " + this.state.totalCases);
+                // console.log("Total Cases: " + this.state.totalCases);
             });
 
 
@@ -210,9 +214,9 @@ class WebScraping extends React.Component {
             .then(json => {
 
 
-                console.log("PL World Rank (Most Cases): " + json.features.findIndex(where => {
-                    return where.attributes.Country_Region === 'Poland';
-                })   );
+                // console.log("PL World Rank (Most Cases): " + json.features.findIndex(where => {
+                //     return where.attributes.Country_Region === 'Poland';
+                // })   );
 
                 json.features.map( (countries, index ) => {
 
@@ -224,9 +228,9 @@ class WebScraping extends React.Component {
                     });
                 })
 
-                console.log("recoveredPoland: " + json.features[json.features.findIndex(where => {
-                    return where.attributes.Country_Region === 'Poland';
-                })].attributes.Recovered);
+                // console.log("recoveredPoland: " + json.features[json.features.findIndex(where => {
+                //     return where.attributes.Country_Region === 'Poland';
+                // })].attributes.Recovered);
 
                 this.setState({
                         recovered: json.features[json.features.findIndex(where => {
@@ -269,6 +273,7 @@ class WebScraping extends React.Component {
         let factor = Math.pow(10, k);
         return Math.round(n*factor)/factor;
     }
+
 
     async componentDidMount() {
 
@@ -357,7 +362,7 @@ class WebScraping extends React.Component {
                             <div className={styles.deathRate}><span>{this.Round(this.state.confirmed / 38383000*100, 3)}%</span> obywateli Polski jest zarażonych.</div>
                             <div className={styles.deathRate}>Co oznacza, że co <span>{this.numberParse(Math.ceil(38383000 / this.state.confirmed))}</span> polak otrzymał pozytywny wynik testu na wirusa SARS-CoV-2.</div>
 
-                            <caption>AKTUALIZACJA: {Date(this.state.lastUpdate)}</caption>
+                            <caption>AKTUALIZACJA: {this.state.lastUpdated}</caption>
                         </div>
                     </div>
 
@@ -388,7 +393,7 @@ class WebScraping extends React.Component {
                         <div className={styles.deathRateBox}>Do tej pory wyzdrowiało <span>{this.Round(this.state.totalRecovered / this.state.totalCases*100, 2)}%</span> wszystkich chorych.</div>
                         <div className={styles.deathRateBox}><span>{this.Round(this.state.totalCases / 7774800000*100, 2)}%</span> populacji Ziemii jest zarażona.</div>
                         <div className={styles.deathRateBox}>Co oznacza, że co <span>{this.numberParse(Math.ceil(7774800000 / this.state.totalCases))}</span> mieszkaniec globu otrzymał pozytywny wynik testu na wirusa SARS-CoV-2.</div>
-                        <div className={styles.deathRateBox}>Do tej pory choroba w <span>{this.Round(this.state.totalDeaths/(this.state.totalDeaths+this.state.totalRecovered)*100, 2)}%</span> przypadków choroba kończy się śmiercią, a w <span>{this.Round(this.state.totalRecovered/(this.state.totalDeaths+this.state.totalRecovered)*100, 2)}%</span> ozdrowieniem chorego.</div>
+
 
 
                     </div>
@@ -430,7 +435,7 @@ class WebScraping extends React.Component {
                         <div className={styles.countryTotalWrapper}>
 
                             <header>SARS-CoV-2 na świecie
-                                (+procent wyzdrowiałych)</header>
+                                (% =  ozdrowieńcy)</header>
 
 
 

@@ -247,7 +247,7 @@ $redColor: #c21807;
     @include mediumShadow;
     margin: 20px 0;
     border-radius: 10px;
-    font-size: 1em;
+    font-size: 0.9em;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -255,7 +255,7 @@ $redColor: #c21807;
     background:  $redColor;
     color: white;
     width: 90vw;
-    padding: 40px 10px;
+    padding: 10px 10px;
     flex-direction: column;
     text-transform: uppercase;
 
@@ -630,7 +630,7 @@ $redColor: #c21807;
   data{
     margin: -10px;
     font-family: Oxanium;
-    font-size: 4em;
+    font-size: 3em;
     color: $redColor;
     font-weight: 800;
 
@@ -713,12 +713,12 @@ $redColor: #c21807;
 }
 
 .websiteTitle{
-  font-size: 1.3em;
+  font-size: 1.2em;
   background: white;
   color: $redColor;
-  padding: 5px 20px;
+  padding: 5px 10%;
   border-radius: 5px;
-  margin: 20px 5px;
+  margin: 10px 5px;
   font-weight: 300;
   text-transform: lowercase;
   b{
