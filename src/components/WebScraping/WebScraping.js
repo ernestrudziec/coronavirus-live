@@ -30,7 +30,7 @@ class WebScraping extends React.Component {
             totalDeaths: null,
             totalRecovered: null,
             totalCountriesArray: [],
-            lastUpdatedObject: null,
+            lastUpdatedObject: new Date(),
         };
 
 
@@ -51,7 +51,8 @@ class WebScraping extends React.Component {
                 // console.log(json.features[json.features.length-1].attributes);
 
                 console.log("lastUpdated: " + json.features[json.features.length-1].attributes.Aktualizacja);
-                this.setState({lastUpdated: json.features[json.features.length-1].attributes.Aktualizacja});
+                this.setState({lastUpdated: json.features[json.features.length-1].attributes.Aktualizacja,
+                    lastUpdatedObject: new Date(json.features[json.features.length-1].attributes.Aktualizacja)});
 
 
                 // console.log("confPoland: " + json.features[json.features.length-1].attributes.Potwierdzone);
@@ -275,6 +276,10 @@ class WebScraping extends React.Component {
     }
 
 
+
+
+
+
     async componentDidMount() {
 
         await this.fetchTotalCountries();
@@ -283,6 +288,7 @@ class WebScraping extends React.Component {
         await this.fetchTotalDeaths();
         await this.fetchTotalRecovered();
         await this.fetchTotalCases();
+
 
 
 
@@ -362,7 +368,7 @@ class WebScraping extends React.Component {
                             <div className={styles.deathRate}><span>{this.Round(this.state.confirmed / 38383000*100, 3)}%</span> obywateli Polski jest zarażonych.</div>
                             <div className={styles.deathRate}>Co oznacza, że co <span>{this.numberParse(Math.ceil(38383000 / this.state.confirmed))}</span> polak otrzymał pozytywny wynik testu na wirusa SARS-CoV-2.</div>
 
-                            <caption>AKTUALIZACJA: {this.state.lastUpdated}</caption>
+                            <caption>AKTUALIZACJA: {this.state.lastUpdatedObject.toLocaleString()}</caption>
                         </div>
                     </div>
 
