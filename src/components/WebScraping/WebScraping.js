@@ -1,6 +1,7 @@
 
 import React from "react";
 import styles from './WebScraping.module.scss';
+import PolandChart from "../PolandChart/PolandChart";
 
 
 
@@ -404,6 +405,8 @@ class WebScraping extends React.Component {
 
                     </div>
 
+                    <PolandChart polandRegions={this.state.polandRegions}/>
+
                     <div className={styles.dataTablesWrapper}>
 
                         <div className={styles.polandRegionsWrapper}>
@@ -501,6 +504,8 @@ class WebScraping extends React.Component {
                     </div>
 
                 </div>
+
+
             </>
         );
     }

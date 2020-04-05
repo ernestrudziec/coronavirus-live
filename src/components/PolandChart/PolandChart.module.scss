@@ -1,0 +1,18 @@
+
+@import '../../styles/global';
+
+
+
+.wrapper{
+  @include mediumShadow;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  position: relative;
+  width: 90vw;
+  min-height: 40vh;
+  margin: 30px 0;
+
+}
