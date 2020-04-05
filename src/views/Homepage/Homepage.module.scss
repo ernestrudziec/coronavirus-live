@@ -1,0 +1,40 @@
+@import '../../styles/global.scss';
+
+
+.footer {
+
+  @include mediumShadow;
+  background: white;
+  width: 90vw;
+  height: 10vh;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 30px;
+  font-weight: 600;
+  font-family: Oxanium;
+  color: gray;
+
+  padding: 60px 10px;
+
+
+  b{
+    font-weight: 400;
+
+  }
+
+  p{
+    margin: 3px;
+    font-size: 0.8em;
+
+  }
+}
+
+.wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

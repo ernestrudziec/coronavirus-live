@@ -435,7 +435,6 @@ class WebScraping extends React.Component {
                                 })
                             }
 
-
                         </div>
 
                         <div className={styles.countryTotalWrapper}>
