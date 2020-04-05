@@ -49,7 +49,7 @@ useEffect(() => {
 
     }
 
-let showLabels = () => {
+let getLabels = () => {
 
     let labels = [];
 
@@ -67,6 +67,7 @@ let showLabels = () => {
 
             if (i < 3) {
                 labels.push(region.jpt_nazwa_);
+
             }
         });
 
@@ -77,6 +78,34 @@ let showLabels = () => {
 
 
 }
+
+let getFontSize = () => {
+
+        if (isMobile()){
+            return 11;
+        }
+        else return 15;
+
+    }
+
+    let getSuggestedMax = () => {
+
+        let suggestedMax = null;
+
+      data.map((object, i) => {
+          if (i === 0){
+
+
+              suggestedMax = parseInt(object.SUM_Confirmed + 100);
+              console.log(suggestedMax);
+
+
+
+          }
+      });
+
+        return suggestedMax;
+    }
 
         setChartRef = new Chart(chartRef.current, {
 
@@ -94,7 +123,8 @@ let showLabels = () => {
                             display: false,
                         },
                         ticks: {
-                            fontSize: 15,
+                            fontSize: getFontSize(),
+
                         }
                     }],
                     yAxes: [{
@@ -106,12 +136,13 @@ let showLabels = () => {
                             fontSize: 15,
                             maxTicksLimit: 5,
                             padding: 0,
+                            suggestedMax: getSuggestedMax(),
                         }
                     }]
                 }
             },
             data: {
-                labels: showLabels(),
+                labels: getLabels(),
                 datasets: [{
                     label: "Potwierdzone przypadki",
                     data: data.map(region => region.SUM_Confirmed),
