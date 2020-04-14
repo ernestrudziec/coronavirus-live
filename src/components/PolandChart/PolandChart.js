@@ -9,6 +9,7 @@ const PolandChart = props => {
     const [polandRegions, setPolandRegions] = useState([]);
 
     useEffect(() => {
+
         setPolandRegions(props.polandRegions);
 
     }, [props.polandRegions, polandRegions]);
@@ -23,7 +24,7 @@ const PolandChart = props => {
                 <BarChart data={props.polandRegions}/>
 
             </section>
-                </>
+            </>
         )
 
 

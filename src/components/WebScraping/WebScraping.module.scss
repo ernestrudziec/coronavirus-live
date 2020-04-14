@@ -692,6 +692,10 @@
 }
 
 .websiteTitle{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   font-size: 1.2em;
   background: white;
   color: $redColor;
@@ -704,4 +708,34 @@
     font-size: 1em !important;
     font-weight: 900 !important;
   }
+}
+
+@keyframes animateCircle {
+
+  0%{
+    opacity: 1;
+  }
+
+  50%{
+    opacity: 0;
+  }
+
+  100%{
+    opacity: 1;
+  }
+}
+
+.animatedCircle{
+
+  display: block;
+  animation: animateCircle 1s ease-in-out infinite;
+  background: $redColor;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  padding: 0;
+  margin: 0;
+  margin-left: 20px;
+
+
 }

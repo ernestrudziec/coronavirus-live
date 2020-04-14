@@ -8,12 +8,14 @@ import useWindowDimensions from "../windowSize/windowSize";
 
 
 
-const BarChart = (props) => {
+    const BarChart = (props) => {
 
     let { height, width } = useWindowDimensions();
 
     const [data, setData] = useState([]);
+
     let [chartRef, setChartRef] = useState(React.createRef());
+
     let [screenSize, setScreenSize] = useState({h: height, w: width});
 
 
@@ -22,13 +24,17 @@ const BarChart = (props) => {
 
 
     useEffect(() => {
+
     console.log(height + " -h:w- " + width);
     console.log(screenSize.h + " -h:w- " + screenSize.w);
+
     }, []);
 
     useEffect(() => {
+
         if(props.data.length === 16)setData(props.data);
         console.log(data);
+
     }, [props.data]);
 
 
@@ -49,7 +55,7 @@ useEffect(() => {
 
     }
 
-let getLabels = () => {
+    let getLabels = () => {
 
     let labels = [];
 
@@ -79,7 +85,7 @@ let getLabels = () => {
 
 }
 
-let getFontSize = () => {
+    let getFontSize = () => {
 
         if (isMobile()){
             return 11;
@@ -154,11 +160,18 @@ let getFontSize = () => {
 
     }, [data]);
 
+
+
     return (
-<div className={styles.wrapper}>
-        <canvas className={styles.myCanvas} ref={chartRef}/>
-</div>
+
+        <div className={styles.wrapper}>
+             <canvas className={styles.myCanvas} ref={chartRef}/>
+        </div>
+
     );
+
+
+
 };
 
 export default BarChart;

@@ -323,7 +323,7 @@ class WebScraping extends React.Component {
                 <div className={styles.totalWrapper}>
 
                     <div className={styles.mainWrapper}>
-                        <header> <caption className={styles.websiteTitle}><b>koronawirus</b>-live.pl</caption> <b> Dane o SARS-CoV-2</b> W Polsce i na Świecie na żywo.</header>
+                        <header> <caption className={styles.websiteTitle}><b>koronawirus</b>-live.pl<figure className={styles.animatedCircle}/></caption> <b> Dane o SARS-CoV-2</b> W Polsce i na Świecie na żywo  </header>
                         <div className={styles.polandWrapper}>
 
                             <div className={styles.polandCasesWrapper}>
@@ -372,7 +372,6 @@ class WebScraping extends React.Component {
                             <caption>AKTUALIZACJA: {this.state.lastUpdatedObject.toLocaleString()}</caption>
                         </div>
                     </div>
-
 
                     <div className={styles.countryBox}>
 
